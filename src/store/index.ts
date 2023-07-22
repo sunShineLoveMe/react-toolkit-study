@@ -2,6 +2,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterSlice from "./features/counterSlice";
 import meSlice from './features/meSlice';
+import numSlice from './features/numSlice';
 /**
  * 这段代码是使用redux toolkit创建redux store的示例
  * redux store 是redux应用程序中的核心概念，它是存储应用程序状态的地方
@@ -11,7 +12,8 @@ const store = configureStore({
     // 合并多个slice
     reducer: {
         counter: counterSlice,
-        me: meSlice
+        me: meSlice,
+        num: numSlice
     },
 })
 

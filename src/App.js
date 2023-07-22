@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 // 引入对应的方法
 import { increment, decrement } from './store/features/counterSlice';
 import { changeName, addAge, addNum } from './store/features/meSlice';
+import { add, reduce, addList, reduceList } from './store/features/numSlice';
 
 import logo from './logo.svg';
 import './App.css';
@@ -19,15 +20,16 @@ function App() {
   // 通过useDispatch 派发事件
   const dispatch = useDispatch()
   return (
-    <div className='App'>
-      <h2>获取到仓库中的数据名字: {initialState.me.name}</h2>
-      <h2>获取到仓库中的数据年龄: {initialState.me.age}</h2>
-      <h2>获取到仓库中的数据num: {initialState.me.num}</h2>
+    
+    // <div className='App'>
+    //   <h2>获取到仓库中的数据名字: {initialState.me.name}</h2>
+    //   <h2>获取到仓库中的数据年龄: {initialState.me.age}</h2>
+    //   <h2>获取到仓库中的数据num: {initialState.me.num}</h2>
 
-      <button onClick={() => { dispatch(changeName('张三')) }}>修改名字</button>
-      <button onClick={() => { dispatch(addAge(8)) }}>增加年龄</button>
-      <button onClick={() => { dispatch(addNum(6)) }}>增加num</button>
-    </div>
+    //   <button onClick={() => { dispatch(changeName('张三')) }}>修改名字</button>
+    //   <button onClick={() => { dispatch(addAge(8)) }}>增加年龄</button>
+    //   <button onClick={() => { dispatch(addNum(6)) }}>增加num</button>
+    // </div>
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />
